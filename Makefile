@@ -3,11 +3,7 @@ DEST = $(HOME)
 # Dotfiles, as they appear in the repo. Each one will be linked to the
 # filename you get by prefixing "~/.".
 CONFIGS = \
-Xdefaults \
-Xmodmap \
-config/awesome/rc.lua \
 gitconfig \
-screenrc \
 vim \
 vimrc \
 zprofile \

@@ -7,9 +7,6 @@ SAVEHIST=7000                     # When to save to the file?
 export SHELL=`which zsh`                 # New shells don't open bash
 export EDITOR=vim                        # Use vim!
 export GREP_OPTIONS='--color=auto'       # Color my greps
-export GOROOT=$HOME/go
-export GOOS=linux
-export GOARCH=386
 if [ $(uname) = Linux ]; then 
     alias ls='ls --color=auto'
 else

@@ -2,13 +2,14 @@
     editor = vim
     excludesfile = ~/.gitignore
 [user]
-    email = jordanthelewis@gmail.com
-    name = Jordan Lewis
+    email = dsiegel@knewton.com
+    name = David Siegel
 [github]
-    user = jordanlewis
+    user = dsiegel
 [color]
     ui = auto
 [alias]
+    st = status
     ci = commit
     co = checkout
 
