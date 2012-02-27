@@ -62,7 +62,6 @@ zstyle ':completion:*' menu select # menu-style completion
 zstyle ':completion:*:functions' ignored-patterns '_*' # no missing completions
 # }}}
 # Bindkeys {{{
-bindkey -v                       # Use vim bindings
 bindkey "^A" beginning-of-line   # Like in bash, for memory
 bindkey "^B" beginning-of-line   # This won't be screwed up by screen, but weird
 bindkey "^E" end-of-line         # Like in bash
@@ -87,55 +86,24 @@ alias mkdir='nocorrect mkdir'  # Don't correct this cmd
 alias mv='nocorrect mv'        # Don't correct this cmd
 alias touch='nocorrect touch'  # Don't correct this cmd
 alias git='nocorrect git'
-alias sl='sl -l'               # ... dumb
-alias termcast='telnet 213.184.131.118 37331'   # noway.ratry.ru 37331
 alias slurp='wget -r --no-parent'
-alias deflac='for file in *.flac; do $(flac -cd "$file" | lame -V 0 --vbr-new - "${file%.flac}.mp3"); done'   # convert all flacs in directory to v0
-# }}}
-# Shells {{{
-alias bh='ssh root@bughouse.econnectix.com'
-alias bhsec='ssh jlewis@bhsec.bard.edu'
-alias ch='ssh root@cheaphotel.econnectix.com'
-#alias chana='ssh jlewis@192.168.0.3'           # chana, my mbp.. need dyndns
-alias cs='ssh jalewis@altair.cs.uchicago.edu'
-alias echoduet='ssh jlewis@echoduet.net'
-alias econ='ssh jlewis@mail.econnectix.com'
-#alias enwina='ssh -X 192.168.0.2'               # This is/was my HP
-alias harper='TERM=xterm ssh jalewis@harper.uchicago.edu'
-alias mookmo='ssh jlewis@mookmo.net'
-alias sartak='ssh toft@sartak.org'
-alias sd='ssh jlewis@silenceisdefeat.com'
-alias yiff='ssh eidolos@yiff.mit.edu'
-# }}}
-# Games {{{
-alias cao='TERM=rxvt telnet crawl.akrasiac.org' # urxvt-color screws up
-alias nao='TERM=rxvt telnet nethack.alt.org'    # urxvt-color screws up
-alias sco='TERM=rxvt telnet slashem.crash-override.net'
-alias spork='TERM=rxvt telnet sporkhack.nineball.org'
 # }}}
 # Shortcuts {{{
-alias '..'='cd ..'               # cd .. takes too much effort!
-alias 'web'='python -m SimpleHTTPServer' # hosts . on :8000
-alias bc='bc -q -l'              # no warranty thing; loads math lib
-alias broadcast='ifconfig | grep broadcast | tail -c 16'
-alias cls='perl -e "print \"\e[2J\""' # prints a clearscreen - for termcast
+alias 'b'='cd ..'               # cd .. takes too much effort!
+alias 'bb'='cd ../..'
+alias 'bbb'='cd ../../..'
+alias 'bbbb'='cd ../../../..'
+alias 'bbbbb'='cd ../../../../..'
+alias 'bbbbbb'='cd ../../../../../..'
 alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s<1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'
-alias hide='xset dpms force standby; exit' # kills my LCD monitor
-alias l='ls'                     # sometimes I think I'm still on a MUD/MOO
-alias mouse='xmodmap -e "pointer = 1 2 3 6 7 8 9 10 4 5"' # fixes my buttons
-alias ncscan='nc -v -z'          # scans ports with netcat
-alias nmapscan='nmap -p'         # scans ports with nmap
-alias probe='ping -i 50 `ifconfig | grep broadcast | tail -c 16`'
+alias l='ls'
+alias ll='ls -l'
+alias la='ls -la'
 alias reload='source ~/.zshrc'   # re-sources this
-alias restartx='sleep 5; startx' # restarts X!
-alias tdA="todo -A"              # displays all todo items
 alias usage='du -hs *'           # nicely displays disk usage of items in pwd
 which htop>/dev/null && alias top='htop' # prettier version of top if it exists
 # }}} 
 # Global shortcuts {{{
-alias -g ...='../..'             # Ease of going backward
-alias -g ....='../../..'         # Yes
-alias -g .....='../../../..'     # YES
 alias -g G='|egrep'              # cat biglongfile G cheese
 alias -g H='|head'               # cat biglongfile H
 alias -g L='|less'               # cat biglongfile L
@@ -148,7 +116,3 @@ alias -g W='|wc'                 # cat biglongfile W
 source ~/.zshprompt
 # }}}
 
-# Print to stdout {{{
-fortune 2>/dev/null || return 0 # essential!
-# }}}
-alias dotperl='rsync -av lib/* ~/.perl/'
