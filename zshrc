@@ -89,6 +89,7 @@ alias git='nocorrect git'
 alias slurp='wget -r --no-parent'
 # }}}
 # Shortcuts {{{
+alias 'k'='/Users/dssiegel/r/utils/cmdline/bin/knewton_ssh_helper.py'
 alias 'b'='cd ..'               # cd .. takes too much effort!
 alias 'bb'='cd ../..'
 alias 'bbb'='cd ../../..'
