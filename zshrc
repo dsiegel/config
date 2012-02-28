@@ -16,6 +16,10 @@ export NNTPSERVER=news-server.nyc.rr.com # Use my ISP's news server
 export PERL5LIB='/Users/jlewis/.perl/'
 export PATH=~/bin:$PATH
 typeset -U PATH
+export IDEA_JDK=/usr/lib/jvm/java-6-sun
+export PYTHONPATH=~/r/utils/lib/python
+export KNEWTON_REPO=~/r
+export KNEWTON_CONF=$KNEWTON_REPO/configurations/virtual-development-server
 
 # }}}
 # Setopts {{{
@@ -89,7 +93,7 @@ alias git='nocorrect git'
 alias slurp='wget -r --no-parent'
 # }}}
 # Shortcuts {{{
-alias 'k'='/Users/dssiegel/r/utils/cmdline/bin/knewton_ssh_helper.py'
+alias 'k'='$HOME/r/utils/cmdline/bin/knewton_ssh_helper.py'
 alias 'b'='cd ..'               # cd .. takes too much effort!
 alias 'bb'='cd ../..'
 alias 'bbb'='cd ../../..'
@@ -103,6 +107,7 @@ alias la='ls -la'
 alias reload='source ~/.zshrc'   # re-sources this
 alias usage='du -hs *'           # nicely displays disk usage of items in pwd
 which htop>/dev/null && alias top='htop' # prettier version of top if it exists
+alias idea=/opt/idea-IC/bin/idea.sh
 # }}} 
 # Global shortcuts {{{
 alias -g G='|egrep'              # cat biglongfile G cheese
