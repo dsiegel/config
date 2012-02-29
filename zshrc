@@ -7,7 +7,7 @@ SAVEHIST=7000                     # When to save to the file?
 export SHELL=`which zsh`                 # New shells don't open bash
 export EDITOR=vim                        # Use vim!
 export GREP_OPTIONS='--color=auto'       # Color my greps
-if [ $(uname) = Linux ]; then 
+if [ $(uname) = Linux ]; then
     alias ls='ls --color=auto'
 else
     export CLICOLOR=1
@@ -21,6 +21,13 @@ export PYTHONPATH=~/r/utils/lib/python
 export KNEWTON_REPO=~/r
 export KNEWTON_CONF=$KNEWTON_REPO/configurations/virtual-development-server
 
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+rvm use 1.9.2
+
+# load private knewton environment
+[[ -s "$HOME/.knewton_env" ]] && source "$HOME/.knewton_env"
+
 # }}}
 # Setopts {{{
 setopt auto_cd             # If I type a directory, assume I mean to cd to it
@@ -28,7 +35,7 @@ setopt auto_pushd          # Automatically push directories onto the stack
 setopt badpattern          # Print an error message on badly formed glob
 #setopt cdablevars          # So we can cd to metachars like ~
 setopt correctall          # Attempt typo corrections
-setopt complete_in_word    # 
+setopt complete_in_word    #
 #setopt extended_glob       # Allow ~ # ^ metachars in globbing
 # disabled - this makes it so you can't use the ^ revision spec thing with git!
 setopt extended_history    # More information in history
@@ -108,7 +115,7 @@ alias reload='source ~/.zshrc'   # re-sources this
 alias usage='du -hs *'           # nicely displays disk usage of items in pwd
 which htop>/dev/null && alias top='htop' # prettier version of top if it exists
 alias idea=/opt/idea-IC/bin/idea.sh
-# }}} 
+# }}}
 # Global shortcuts {{{
 alias -g G='|egrep'              # cat biglongfile G cheese
 alias -g H='|head'               # cat biglongfile H
@@ -121,4 +128,3 @@ alias -g W='|wc'                 # cat biglongfile W
 # Prompt {{{
 source ~/.zshprompt
 # }}}
-
