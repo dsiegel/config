@@ -10,6 +10,7 @@ zprofile \
 zsh \
 zshenv \
 zshprompt \
+zshcomplete \
 zshrc
 
 # The names of the pathogen bundles we want to install. These are kept as

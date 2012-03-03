@@ -1,6 +1,7 @@
 # .zshrc by Jordan Lewis
 
 # Environment variables {{{
+fpath=($HOME/.zshcomplete $fpath)
 HISTFILE=~/.zshhistory            # What histfile are we using?
 HISTSIZE=100000                   # Big = better
 SAVEHIST=7000                     # When to save to the file?
@@ -27,6 +28,9 @@ rvm use 1.9.2
 
 # load private knewton environment
 [[ -s "$HOME/.knewton_env" ]] && source "$HOME/.knewton_env"
+
+# load knife bash completion
+[[ -s "$HOME/.knife-bash-completion" ]] && source "$HOME/.knife-bash-completion"
 
 # }}}
 # Setopts {{{
