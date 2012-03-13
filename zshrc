@@ -101,6 +101,7 @@ alias mkdir='nocorrect mkdir'  # Don't correct this cmd
 alias mv='nocorrect mv'        # Don't correct this cmd
 alias touch='nocorrect touch'  # Don't correct this cmd
 alias git='nocorrect git'
+alias knife='nocorrect knife'
 alias slurp='wget -r --no-parent'
 # }}}
 # Shortcuts {{{
